@@ -22,14 +22,14 @@
   <p>
     <%= f.submit %>
 
-  </p>
-flash.now[:alert] = ["ensure you fill in the correct info!"]
+   </p>
+ flash.now[:alert] = ["ensure you fill in the correct info!"]
 
 
 
-<% if picture.errors.any? %>
+<% if @picture.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
+    <h2><%= pluralize(picture.errors.count, "error") %> :</h2>
 
     <ul>
     <% picture.errors.full_messages.each do |msg| %>
@@ -37,4 +37,5 @@ flash.now[:alert] = ["ensure you fill in the correct info!"]
     <% end %>
     </ul>
   </div>
+<% end %>
 <% end %>
